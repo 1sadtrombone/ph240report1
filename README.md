@@ -3,7 +3,7 @@ Code used to calculate the equivalent litres per hundred kilomoeters (eLHK) of a
 To calculate the eLHK for an electric car in your region,
 
   1. Do some research. Find the fraction of total energy generated that each type of power plant is responsible for in your region.
-  2. Write down an array with entries equal to the fraction of total energy for each type of plant. The order should be [coal, natural gas, nuclear, hydro, wind, solar, geo, bio]. The array should sum to 1.
+  2. Write down a numpy array with entries equal to the fraction of total energy for each type of plant. The order should be [coal, natural gas, nuclear, hydro, wind, solar, geo, bio]. The array should sum to 1.
   3. Plug that array into `get_Leq_per_100km` to obtain the eLHK.
   4. Profit?
 
