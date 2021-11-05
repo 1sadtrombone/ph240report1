@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def get_kgCO2_per_km(breakdown):
-    kgCO2_per_km = kWh_per_100km * np.sum(kg_CO2e_per_kWh*breakdown) /100
+    kgCO2_per_km = kWh_per_100km * np.sum(kg_CO2_per_kWh_chem*breakdown) /100
     return kgCO2_per_km
 def get_kgCO2_per_km_from_LHK(LHK):
     kgCO2_per_km = LHK * 1/(Lgas_per_kgCO2)* 1/100
@@ -18,7 +18,11 @@ kWh_per_100km = 19.3
 # [coal, natural gas, nuclear, hydro, wind, solar, geo, bio]
 # IGNORES PETROLEUM (TINY CONTRIBUTION ANYWAY, NO DATA)
 # chose pv since CSP seems dead for now [cite]
-kg_CO2e_per_kWh = np.array([1004, 472, 17, 4, 13, 47, 47, 39])/1000
+# IPCC report
+#kg_CO2e_per_kWh = np.array([1004, 472, 17, 4, 13, 47, 47, 39])/1000
+# calculations from chemistry
+kg_CO2_per_kWh_chem = np.array([0.99, 0.65, 0, 0, 0, 0, 0, 1.15])
+
 
 if __name__ == "__main__":
   # assume "wind & solar" means equal of each, and that "other" means equal of geo and bio
