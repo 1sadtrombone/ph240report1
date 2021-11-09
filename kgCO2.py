@@ -23,7 +23,7 @@ kWh_per_100km = 19.3
 #kg_CO2e_per_kWh = np.array([1004, 472, 17, 4, 13, 47, 47, 39])/1000
 
 # calculations from chemistry
-kg_CO2_per_kWh_chem = np.array([0.99, 0.65, 0, 0, 0, 0, 0, 1.15])
+kg_CO2_per_kWh_chem = np.array([0.99, 0.65, 0, 0, 0, 0, 0, 0])
 
 
 if __name__ == "__main__":
